@@ -62,4 +62,4 @@ Run this command (any change you make to the HTML, CSS, JavaScript code will be 
 
 npm run dev
 
-Then go to http://127.0.0.1:5173/ or https://localhost:5173/ from your browser and see the web application (front end application).
+Then go to http://127.0.0.1:5173/ or http://localhost:5173/ from your browser and see the web application (front end application).
