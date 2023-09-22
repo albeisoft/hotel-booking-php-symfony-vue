@@ -8,7 +8,12 @@ Hotel Booking - PHP Symfony Vue (hotel-booking-php-symfony-vue) is a version of 
 	* lexik/jwt-authentication-bundle (this bundle provides JWT (Json Web Token) authentication for your Symfony API)
 	* nelmio/NelmioCorsBundle (Adds CORS [Cross-Origin Resource Sharing] headers support in your Symfony application)
 	* etc.
-- front end (client side, browser side) with JavaScript and Vue (Vue.js) version 3.x. that is an JavaScript open-source model–view–viewmodel (MVVM) front end JavaScript framework for building user interfaces and single-page applications (SPA); moment.js (for date formating and date processing with Vue); etc.
+- front end (client side, browser side) with JavaScript and: 
+	* Vue (Vue.js) version 3.x. that is an JavaScript open-source model–view–viewmodel (MVVM) front end JavaScript framework for building user interfaces and single-page applications (SPA); 
+	* Pinia (the intuitive store for Vue.js) - Pinia is a store library for Vue, it allows you to share a state across components/pages. If you are familiar with the Composition API, you might be thinking you can already share a global state with a simple export const state = reactive({}). 
+	Pinia builds an easy and properly typed state management system using the new reactivity mechanism and is an excellent library for managing the reactive state of your application. When compared to Vuex, the Pinia API is significantly easier to learn and makes your code a lot easier to read.;
+	* moment.js (for date formating and date processing with Vue); 
+	* PrimeVue (Vue UI Component Library) - PrimeVue is a member of a group of open source UI component libraries provided by PrimeTek. Besides the PrimeVue component library, PrimeTek also provides versions for Java (PrimeFaces), Angular (PrimeNG) and React (PrimeReact).
 - database: MariaDB (MariaDB Server is one of the most popular open source relational databases. It's made by the original developers of MySQL and guaranteed to stay open source.). 
 
 Installation
