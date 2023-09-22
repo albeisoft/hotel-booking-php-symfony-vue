@@ -28,6 +28,9 @@ class Room
     #[ORM\Column]
     private ?int $category_id = null;
 
+    #[ORM\Column]
+    private ?bool $is_view = null;
+
     #[ORM\Column(length: 255)]
     private ?string $note = null;
 
@@ -35,7 +38,7 @@ class Room
     private ?\DateTimeInterface $created_at = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $updated_at = null;
+    private ?\DateTimeInterface $updated_at = null;   
 
     public function getId(): ?int
     {
@@ -90,6 +93,18 @@ class Room
         return $this;
     }
 
+    public function isIsView(): ?bool
+    {
+        return $this->is_view;
+    }
+
+    public function setIsView(bool $is_view): self
+    {
+        $this->is_view = $is_view;
+
+        return $this;
+    }
+
     public function getNote(): ?string
     {
         return $this->note;
@@ -124,5 +139,5 @@ class Room
         $this->updated_at = $updated_at;
 
         return $this;
-    }
+    }    
 }

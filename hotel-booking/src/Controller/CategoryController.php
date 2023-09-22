@@ -134,7 +134,7 @@ class CategoryController extends AbstractController
         $category->setName($content->name);
         $category->setPrice($content->price);
         $dateTimeNow = new DateTime("now");
-        $client->setUpdatedAt($dateTimeNow);
+        $category->setUpdatedAt($dateTimeNow);
 
         $entityManager->flush();
    

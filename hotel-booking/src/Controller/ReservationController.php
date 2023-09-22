@@ -20,10 +20,11 @@ class ReservationController extends AbstractController
         $entityManager = $doctrine->getManager();
 
         $query = $entityManager->createQuery('
-        select re.id, ro.name as room_name, re.date, re.no_days, re.no_persons 
-        from App\Entity\Reservation re 
+        select re.id, ro.name as room_name, cl.name as client_name, re.date, re.no_days, re.no_persons 
+        from App\Entity\Reservation re         
         inner join App\Entity\Room ro 
-        with re.room_id = ro.id 
+        inner join App\Entity\Client cl 
+        with re.room_id = ro.id and re.client_id = cl.id
         order by re.id desc
         ');
 
@@ -38,8 +39,9 @@ class ReservationController extends AbstractController
         $data = [];
         foreach ($reservations as $reservation) {
             $data[] = [
-                'id' => $reservation->getId(),
+                'id' => $reservation->getId(),                
                 'room_id' => $reservation->getRoomId(),
+                'client_id' => $reservation->getClientId(),
                 'date' => $reservation->getDate(),
                 'no_days' => $reservation->getNoDays(),
                 'no_persons' => $reservation->getNoPersons()
@@ -135,6 +137,7 @@ class ReservationController extends AbstractController
         $data =  [
             'id' => $reservation->getId(),
             'room_id' => $reservation->getRoomId(),
+            'client_id' => $reservation->getClientId(),
             'date' => $reservation->getDate(),
             'no_days' => $reservation->getNoDays(),
             'no_persons' => $reservation->getNoPersons()

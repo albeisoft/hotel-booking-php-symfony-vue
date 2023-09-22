@@ -20,7 +20,7 @@ class RoomController extends AbstractController
         $entityManager = $doctrine->getManager();
 
         $query = $entityManager->createQuery('
-        select r.id, r.name, r.floor, r.no_places, c.name as category_name
+        select r.id, r.name, r.floor, r.no_places, c.name as category_name, r.is_view
         from App\Entity\Room r 
         inner join App\Entity\Category c 
         with r.category_id = c.id
@@ -45,6 +45,7 @@ class RoomController extends AbstractController
                 'floor' => $room->getFloor(),
                 'no_places' => $room->getNoPlaces(),
                 'category_id' => $room->getCategoryId(),
+                'is_view' => $room->isIsView(),
                 'note' => $room->getNote()
             ];
         }
@@ -75,6 +76,7 @@ class RoomController extends AbstractController
         $room->setFloor($content->floor);
         $room->setNoPlaces($content->no_places);
         $room->setCategoryId($content->category_id);
+        $room->setIsView($content->is_view);
         $room->setNote($content->note);
         $dateTimeNow = new DateTime("now");
         $room->setCreatedAt($dateTimeNow);
@@ -101,6 +103,7 @@ class RoomController extends AbstractController
             'floor' => $room->getFloor(),
             'no_places' => $room->getNoPlaces(),
             'category_id' => $room->getCategoryId(),
+            'is_view' => $room->isIsView(),
             'note' => $room->getNote()
         ];
            
@@ -125,6 +128,7 @@ class RoomController extends AbstractController
         $room->setFloor($content->floor);
         $room->setNoPlaces($content->no_places);
         $room->setCategoryId($content->category_id);
+        $room->setIsView($content->is_view);
         $room->setNote($content->note);
         $dateTimeNow = new DateTime("now");
         $room->setUpdatedAt($dateTimeNow); 
@@ -137,6 +141,7 @@ class RoomController extends AbstractController
             'floor' => $room->getFloor(),
             'no_places' => $room->getNoPlaces(),
             'category_id' => $room->getCategoryId(),
+            'is_view' => $room->isIsView(),
             'note' => $room->getNote()
         ];
            
