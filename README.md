@@ -11,9 +11,10 @@ Hotel Booking - PHP Symfony Vue (hotel-booking-php-symfony-vue) is a version of 
 - front end (client side, browser side) with JavaScript and: 
 	* Vue (Vue.js) version 3.x. that is an JavaScript open-source model–view–viewmodel (MVVM) front end JavaScript framework for building user interfaces and single-page applications (SPA); 
 	* Pinia (the intuitive store for Vue.js) - Pinia is a store library for Vue, it allows you to share a state across components/pages. If you are familiar with the Composition API, you might be thinking you can already share a global state with a simple export const state = reactive({}). 
-	Pinia builds an easy and properly typed state management system using the new reactivity mechanism and is an excellent library for managing the reactive state of your application. When compared to Vuex, the Pinia API is significantly easier to learn and makes your code a lot easier to read.;
+	Pinia builds an easy and properly typed state management system using the new reactivity mechanism and is an excellent library for managing the reactive state of your application. When compared to Vuex, the Pinia API is significantly easier to learn and makes your code a lot easier to read;
 	* moment.js (for date formating and date processing with Vue); 
-	* PrimeVue (Vue UI Component Library) - PrimeVue is a member of a group of open source UI component libraries provided by PrimeTek. Besides the PrimeVue component library, PrimeTek also provides versions for Java (PrimeFaces), Angular (PrimeNG) and React (PrimeReact).
+	* PrimeVue (Vue UI Component Library) - PrimeVue is a member of a group of open source UI component libraries provided by PrimeTek. Besides the PrimeVue component library, PrimeTek also provides versions for Java (PrimeFaces), Angular (PrimeNG) and React (PrimeReact);
+	* Yup (simple Object schema validation) - Yup is a JavaScript schema builder for validating or parsing values. It allows you to model complex or inter-dependent validations using built-in validators or custom validations using regular expressions;
 - database: MariaDB (MariaDB Server is one of the most popular open source relational databases. It's made by the original developers of MySQL and guaranteed to stay open source.). 
 
 Installation
